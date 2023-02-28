@@ -56,8 +56,8 @@ const userControllers = {
             return res.status(500).json(err);
         })
     },
-    //update a user by id
 
+    //update a user by id
     updateUserById(req,res){
         User.findByIdAndUpdate({
             _id: req.params.userId,
@@ -92,6 +92,7 @@ const userControllers = {
         })
         .catch((err) => res.status(500).json(err))
     },  
+    
     //delete friend from a user's friend list
     deleteFriend(req, res){
        User.findOneAndUpdate(
